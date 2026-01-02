@@ -1,0 +1,158 @@
+<%- include('partials/header') %>
+
+    <main class="main-container">
+        <section class="content-area" style="grid-column: 1 / -1;">
+            <div class="section-header">
+                <h2 class="section-title reveal-text">Espaço de Discussão</h2>
+            </div>
+
+            <!-- Formulário de Discussão -->
+            <div class="discussion-form-container scroll-reveal visible">
+                <h3 style="margin-bottom: 1.5rem; font-weight: 300;">Deixe sua opinião</h3>
+                <form action="/discussao" method="POST" class="discussion-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" id="name" name="name" class="form-input" required placeholder="Seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="opinion" class="form-label">Sua Opinião</label>
+                        <textarea id="opinion" name="opinion" class="form-input form-textarea" required
+                            placeholder="Escreva o que você pensa..." rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        Publicar <span class="arrow">→</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Lista de Discussões -->
+            <div class="discussions-list" style="margin-top: 4rem;">
+                <h3 style="margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                    Opiniões Recentes
+                </h3>
+
+                <% if (discussions.length> 0) { %>
+                    <% discussions.forEach(function(item) { %>
+                        <div class="discussion-card scroll-reveal visible">
+                            <div class="discussion-header">
+                                <span class="discussion-author">
+                                    <%= item.name %>
+                                </span>
+                                <span class="discussion-date">
+                                    <%= item.date %>
+                                </span>
+                            </div>
+                            <p class="discussion-body">
+                                <%= item.opinion %>
+                            </p>
+                        </div>
+                        <% }); %>
+                            <% } else { %>
+                                <p class="no-discussions">Seja o primeiro a compartilhar sua opinião.</p>
+                                <% } %>
+            </div>
+        </section>
+    </main>
+
+    <style>
+        /* Estilos Específicos para a Página de Discussão */
+        .discussion-form-container {
+            background: var(--surface-color);
+            padding: var(--spacing-md);
+            border: 1px solid var(--border-color);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-input {
+            width: 100%;
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 1rem;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--text-main);
+        }
+
+        .form-textarea {
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--text-main);
+            color: var(--bg-color);
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            background-color: #fff;
+            /* Garantir contraste */
+        }
+
+        .discussion-card {
+            border-bottom: 1px solid var(--border-color);
+            padding: 2rem 0;
+            animation: fadeIn 0.8s forwards;
+        }
+
+        .discussion-card:last-child {
+            border-bottom: none;
+        }
+
+        .discussion-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .discussion-author {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .discussion-date {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .discussion-body {
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+        }
+
+        .no-discussions {
+            color: var(--text-muted);
+            font-style: italic;
+        }
+    </style>
+
+    <%- include('partials/footer') %>

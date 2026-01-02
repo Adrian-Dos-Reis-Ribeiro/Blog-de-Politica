@@ -1,0 +1,37 @@
+<%- include('partials/header', { title: 'Artigos' }) %>
+
+    <main class="main-container">
+        <section class="posts-feed" style="width: 100%;">
+            <div class="section-header">
+                <h2 class="section-title scroll-reveal">Todos os Artigos</h2>
+            </div>
+
+            <!-- Reutilizando o loop de posts -->
+            <% posts.forEach(post=> { %>
+                <article class="post-card scroll-reveal">
+                    <div class="post-meta">
+                        <span class="category <%= post.categoryClass %>">
+                            <%= post.category %>
+                        </span>
+                        <span class="date">
+                            <%= post.date %>
+                        </span>
+                    </div>
+                    <h3 class="post-title"><a href="#">
+                            <%= post.title %>
+                        </a></h3>
+                    <p class="post-excerpt">
+                        <%= post.excerpt %>
+                    </p>
+                    <div class="post-footer">
+                        <span class="author">por <%= post.author %></span>
+                        <a href="/artigo/<%= post.id %>" class="read-more"><span>Ler completo</span> <span
+                                class="arrow">→</span></a>
+                    </div>
+                </article>
+                <% }); %>
+
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>

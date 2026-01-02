@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= typeof title !=='undefined' ? title + ' | ' : '' %>Blog Política – Esquerda x Direita
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Links (Apontando para a pasta pública) -->
+    <link rel="stylesheet" href="/css/blog.css">
+    <% if (typeof cssFile !=='undefined' ) { %>
+        <link rel="stylesheet" href="/css/<%= cssFile %>">
+        <% } %>
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="brand">
+                <h1 class="reveal-text">Blog Política</h1>
+                <p class="subtitle reveal-text" style="transition-delay: 0.1s;">Análises sobre esquerda e direita no
+                    Brasil</p>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="fade-in-item"><a href="/login" class="nav-link">Login</a></li>
+                    <li class="fade-in-item"><a href="/" class="nav-link">Início</a></li>
+                    <li class="fade-in-item"><a href="/artigos" class="nav-link">Artigos</a></li>
+                    <li class="fade-in-item"><a href="/discussao" class="nav-link">Discussão</a></li>
+                    <li class="fade-in-item"><a href="/sobre" class="nav-link">Sobre</a></li>
+                    <li class="fade-in-item"><a href="/contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Acesso Restrito</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="login1.css">
+    <script src="login1.js" defer></script>
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <div class="login-container">
+        <header class="login-header">
+            <!-- Typewriter effect on H1 -->
+            <h1>
+                <span class="typewriter-effect" data-i18n="welcome_back">Welcome Back.</span>
+            </h1>
+            <p class="subtitle fade-in" data-i18n="login_subtitle">Please identify yourself to continue.</p>
+        </header>
+
+        <form action="" class="login-form fade-in" style="animation-delay: 0.2s;">
+            <div class="input-group">
+                <input type="text" id="username" placeholder=" " required autocomplete="off">
+                <label for="username" data-i18n="label_username">Username</label>
+            </div>
+
+            <div class="input-group">
+                <input type="email" id="email" placeholder=" " required autocomplete="off">
+                <label for="email" data-i18n="label_email">Email</label>
+            </div>
+
+            <div class="input-group">
+                <input type="password" id="password" placeholder=" " required autocomplete="off">
+                <label for="password" data-i18n="label_password">Password</label>
+            </div>
+
+            <button type="submit" class="btn-login">
+                <span data-i18n="btn_enter">Enter</span>
+                <span class="arrow">→</span>
+            </button>
+        </form>
+
+        <div class="login-footer fade-in" style="animation-delay: 0.4s;">
+            <a href="blog.html" class="back-link" data-i18n="back_to_blog">← Back to Blog</a>
+        </div>
+    </div>
+</body>
+
+</html>

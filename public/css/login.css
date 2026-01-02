@@ -1,0 +1,220 @@
+/* CSS Reset & Variables (Shared with Blog for Consistency) */
+:root {
+  --bg-color: #050505;
+  --surface-color: #0a0a0a;
+  --text-main: #ffffff;
+  --text-muted: #888888;
+  --border-color: #222222;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Space Grotesk", sans-serif;
+
+  --transition-fast: 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevent scroll on login page */
+  cursor: none; /* Custom cursor */
+}
+
+/* Custom Cursor */
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+}
+
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+body:hover .cursor-outline {
+  width: 50px;
+  height: 50px;
+}
+
+/* Login Container */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.login-header {
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  min-height: 3.5rem; /* Space for typewriter */
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Typewriter Effect */
+.typewriter-effect {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid var(--text-main);
+  white-space: nowrap;
+  animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--text-main);
+  }
+}
+
+/* Form Styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  position: relative;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 10px 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: var(--transition-fast);
+  outline: none;
+}
+
+input:focus {
+  border-bottom-color: var(--text-main);
+}
+
+/* Floating Label */
+label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+  pointer-events: none; /* Let clicks pass through to input */
+  transition: 0.3s ease;
+}
+
+/* Move label up when focused or has content (using placeholder hack) */
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+  top: -12px;
+  font-size: 0.75rem;
+  color: var(--text-main);
+}
+
+.btn-login {
+  margin-top: 1rem;
+  background: var(--text-main);
+  color: var(--bg-color);
+  border: none;
+  padding: 1rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-login:hover {
+  background-color: #ddd;
+  transform: translateY(-2px);
+}
+
+.btn-login .arrow {
+  transition: transform 0.3s;
+}
+
+.btn-login:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Footer & Back Link */
+.login-footer {
+  margin-top: 3rem;
+}
+
+.back-link {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: var(--text-main);
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s forwards ease-out;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

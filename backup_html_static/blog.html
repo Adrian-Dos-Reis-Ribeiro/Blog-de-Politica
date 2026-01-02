@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Política – Esquerda x Direita</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+        
+    <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="brand">
+                <h1 class="reveal-text" data-i18n="blog_title">Political Blog</h1>
+                <p class="subtitle reveal-text" style="transition-delay: 0.1s;" data-i18n="blog_subtitle">Analyses on
+                    left and right in Brazil</p>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="fade-in-item"><a href="login1.html" class="nav-link" data-i18n="nav_login">Login</a></li>
+                    <li class="fade-in-item"><a href="#" class="nav-link" data-i18n="nav_home">Home</a></li>
+                    <li class="fade-in-item"><a href="#" class="nav-link" data-i18n="nav_articles">Articles</a></li>
+                    <li class="fade-in-item"><a href="#" class="nav-link" data-i18n="nav_about">About</a></li>
+                    <li class="fade-in-item"><a href="#" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container">
+        <section class="posts-feed" aria-label="blog posts">
+            <div class="section-header">
+                <h2 class="section-title scroll-reveal" data-i18n="latest_posts">Latest Publications</h2>
+            </div>
+
+            <article class="post-card scroll-reveal">
+                <div class="post-meta">
+                    <span class="category tag-left" data-i18n="cat_left">Left</span>
+                    <span class="date">20/12/2025</span>
+                </div>
+                <h3 class="post-title"><a href="#" data-i18n="post1_title">The Dialectic of Modern Political
+                        Discourse</a></h3>
+                <p class="post-excerpt" data-i18n="post1_excerpt">
+                    A deep analysis on how narratives are built and deconstructed in the current scenario.
+                    Public debate demands more than shallow opinions; it demands foundation and history.
+                </p>
+                <div class="post-footer">
+                    <span class="author" data-i18n="author_by">by Your Name</span>
+                    <a href="#" class="read-more"><span data-i18n="read_article">Read article</span> <span
+                            class="arrow">→</span></a>
+                </div>
+            </article>
+
+            <article class="post-card scroll-reveal">
+                <div class="post-meta">
+                    <span class="category tag-right" data-i18n="cat_right">Right</span>
+                    <span class="date">19/12/2025</span>
+                </div>
+                <h3 class="post-title"><a href="#" data-i18n="post2_title">Economic Freedom and Social
+                        Responsibility</a></h3>
+                <p class="post-excerpt" data-i18n="post2_excerpt">
+                    Exploring the pillars of conservatism and economic liberalism in the Brazilian context.
+                    How to balance the free market with the demands of an unequal society?
+                </p>
+                <div class="post-footer">
+                    <span class="author" data-i18n="author_by">by Your Name</span>
+                    <a href="#" class="read-more"><span data-i18n="read_article">Read article</span> <span
+                            class="arrow">→</span></a>
+                </div>
+            </article>
+
+            <article class="post-card scroll-reveal">
+                <div class="post-meta">
+                    <span class="category tag-center" data-i18n="cat_center">Center</span>
+                    <span class="date">18/12/2025</span>
+                </div>
+                <h3 class="post-title"><a href="#" data-i18n="post3_title">The Middle Path: Utopia or Reality?</a></h3>
+                <p class="post-excerpt" data-i18n="post3_excerpt">
+                    In a polarized world, the search for consensus becomes a revolutionary act.
+                    Analyzing the possibilities of an effective third way.
+                </p>
+                <div class="post-footer">
+                    <span class="author" data-i18n="author_by">by Your Name</span>
+                    <a href="#" class="read-more"><span data-i18n="read_article">Read article</span> <span
+                            class="arrow">→</span></a>
+                </div>
+            </article>
+        </section>
+
+        <aside class="sidebar scroll-reveal">
+            <div class="widget author-widget">
+                <h3 class="widget-title" data-i18n="widget_editor">Editor-in-Chief</h3>
+                <p class="author-bio" data-i18n="editor_bio">Critical observer of national politics. Seeking the truth
+                    through facts and rhetoric.</p>
+            </div>
+
+            <div class="widget categories-widget">
+                <h3 class="widget-title" data-i18n="widget_ideology">Browse by Ideology</h3>
+                <ul class="category-list">
+                    <li><a href="#" class="cat-link"><span data-i18n="cat_left">Left</span> <span
+                                class="count">(12)</span></a></li>
+                    <li><a href="#" class="cat-link"><span data-i18n="cat_right">Right</span> <span
+                                class="count">(08)</span></a></li>
+                    <li><a href="#" class="cat-link"><span data-i18n="cat_center">Center</span> <span
+                                class="count">(05)</span></a></li>
+                    <li><a href="#" class="cat-link"><span data-i18n="cat_elections">Elections</span> <span
+                                class="count">(03)</span></a></li>
+                </ul>
+            </div>
+
+            <div class="widget search-widget">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Search..."
+                        data-i18n-placeholder="search_placeholder">
+                    <button type="submit" class="search-btn">🔍</button>
+                </form>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 <span data-i18n="blog_title">Political Blog</span>. <span data-i18n="rights_reserved">All
+                    rights reserved.</span></p>
+            <p class="footer-tagline" data-i18n="footer_tagline">Premium & Minimalist Design</p>
+        </div>
+    </footer>
+
+    <script src="blog.js"></script>
+</body>
+
+</html>

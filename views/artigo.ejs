@@ -1,0 +1,95 @@
+<%- include('partials/header') %>
+
+    <main class="main-container">
+        <article class="full-article anime-entry">
+            <!-- Optional Header Image -->
+            <% if (post.image) { %>
+                <div class="article-hero-image">
+                    <img src="<%= post.image %>" alt="Imagem de Capa">
+                </div>
+                <% } %>
+
+                    <!-- Meta Header -->
+                    <header class="article-header">
+                        <div class="post-meta">
+                            <span class="category <%= post.categoryClass %>">
+                                <%= post.category %>
+                            </span>
+                            <span class="date">
+                                <%= post.date %>
+                            </span>
+                        </div>
+                        <h1 class="article-title reveal-text">
+                            <%= post.title %>
+                        </h1>
+                        <p class="article-author">
+                            <span data-i18n="author_by">por</span>
+                            <%= post.author %>
+                        </p>
+                    </header>
+
+                    <!-- Main Content -->
+                    <div class="article-content fade-in-item">
+                        <%- post.content %> <!-- Using <%- %> to render HTML tags in content -->
+                    </div>
+
+                    <!-- Navigation / Footer of Article -->
+                    <div class="article-footer">
+                        <a href="/" class="back-link">
+                            <span class="arrow">←</span> <span data-i18n="back_home">Voltar para Início</span>
+                        </a>
+                    </div>
+
+                    <!-- Comments Section -->
+                    <section class="comments-section">
+                        <h3 class="section-title">Comentários</h3>
+
+                        <!-- Comment List -->
+                        <div class="comments-list">
+                            <% if (typeof comments !=='undefined' && comments.length> 0) { %>
+                                <% comments.forEach(comment=> { %>
+                                    <div class="comment-card">
+                                        <div class="comment-header">
+                                            <span class="comment-author">
+                                                <%= comment.author %>
+                                            </span>
+                                            <span class="comment-date">
+                                                <%= comment.date %>
+                                            </span>
+                                        </div>
+                                        <p class="comment-text">
+                                            <%= comment.text %>
+                                        </p>
+                                    </div>
+                                    <% }); %>
+                                        <% } else { %>
+                                            <p class="no-comments">Seja o primeiro a comentar.</p>
+                                            <% } %>
+                        </div>
+
+                        <!-- Comment Form -->
+                        <form action="/artigo/<%= post.id %>/comentar" method="POST" class="comment-form">
+                            <h4>Deixe sua opinião</h4>
+                            <div class="form-group">
+                                <input type="text" name="author" placeholder="Seu Nome (ou codinome)" required
+                                    class="input-field">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="text" rows="4" placeholder="O que você achou?" required
+                                    class="input-field"></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Publicar Comentário</button>
+                        </form>
+                    </section>
+        </article>
+
+        <aside class="sidebar scroll-reveal">
+            <div class="widget author-widget">
+                <h3 class="widget-title" data-i18n="widget_editor">Editor Chefe</h3>
+                <p class="author-bio" data-i18n="editor_bio">Observador crítico da política nacional. Buscando a verdade
+                    através dos fatos e da retórica.</p>
+            </div>
+        </aside>
+    </main>
+
+    <%- include('partials/footer') %>

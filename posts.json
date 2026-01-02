@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "title": "O Crepúsculo dos Deuses Caídos",
+    "excerpt": "Nas ruínas das promessas coletivas, ouvimos o eco de um amanhã que se recusa a nascer. A utopia sangra.",
+    "content": "<p>Caminhamos por avenidas pavimentadas com boas intenções, onde cada pedra é um sonho fragmentado. A massa, esse leviatã adormecido, clama por justiça não com a voz da razão, mas com o uivo da fome espiritual.</p><p>Eles nos prometeram o pão e as rosas, mas nos deram apenas os espinhos e as migalhas. A arquitetura da igualdade desmorona sob o peso da própria burocracia humana. Somos todos iguais, dizem eles, iguais na miséria de espírito e na desesperança.</p><p>Olhar para a esquerda não é mais olhar para o futuro; é contemplar um horizonte cinzento onde o sol da revolução se pôs há muito tempo, deixando apenas o frio da conformidade.</p>",
+    "date": "20/12/2025",
+    "category": "Esquerda",
+    "categoryClass": "tag-left",
+    "author": "A Voz da Multidão"
+  },
+  {
+    "id": 2,
+    "title": "A Fortaleza de Ferro Enferrujado",
+    "excerpt": "A tradição é um cadáver que insistimos em carregar. Muros altos não protegem contra o vazio interior.",
+    "content": "<p>Erguemos estátuas para heróis mortos e leis para controlar os vivos. A ordem, dizem, é o antídoto para o caos. Mas o que é a ordem senão o silêncio do cemitério?</p><p>Defendemos o mercado como quem defende um deus cruel que exige sacrifícios diários. A liberdade de acumular tornou-se a liberdade de ignorar. No altar do lucro, queimamos nossa humanidade e chamamos a cinza de progresso.</p><p>A direita marcha com passos firmes em direção ao abismo, guiada por mapas desenhados em séculos esquecidos. Acreditam que o passado pode salvá-los, mas o tempo é um rio que só corre para frente, afogando aqueles que tentam nadar contra a correnteza.</p>",
+    "date": "19/12/2025",
+    "category": "Direita",
+    "categoryClass": "tag-right",
+    "author": "O Guardião da Ordem"
+  },
+  {
+    "id": 3,
+    "title": "O Pêndulo no Vácuo",
+    "excerpt": "A indecisão é o purgatório da alma. Tentar agradar a todos é a forma mais lenta de morrer.",
+    "content": "<p>Eles chamam de equilíbrio. Eu chamo de paralisia. No centro da tempestade, não há paz, apenas o olho do furacão observando a destruição de ambos os lados com indiferença calculada.</p><p>O caminho do meio é uma linha tênue desenhada sobre o nada. É a tentativa fútil de misturar óleo e água, de reconciliar o fogo e a pólvora. A moderação em tempos de barbárie não é virtude, é covardia.</p><p>O centrista é um espectador do próprio apocalipse, analisando friamente as chamas enquanto sua própria casa arde. Ele busca a razão em um mundo que abraçou a loucura.</p>",
+    "date": "18/12/2025",
+    "category": "Centro",
+    "categoryClass": "tag-center",
+    "author": "O Observador Neutro"
+  },
+  {
+    "id": 4,
+    "title": "O ESGOTO: A SINFONIA DOS RATOS",
+    "excerpt": "Onde a luz não toca, a verdade prospera. Bem-vindo ao subsolo da moralidade, onde todos nós rastejamos.",
+    "content": "<p><strong>O SUBMUNDO:</strong> Não há ideologia no esgoto, apenas sobrevivência. Aqui, esquerda e direita se abraçam na imundície, trocando favores como quem troca doenças.</p><p>Vocês olham para cima, esperando salvação, enquanto nós olhamos para baixo e vemos a fundação podre de tudo o que vocês construíram. O cheiro é insuportável, mas é o cheiro da realidade.</p><p>O sistema não está quebrado; ele foi construído para funcionar exatamente assim. Uma máquina de moer carne humana para alimentar engrenagens de ouro. E você? Você é apenas o combustível.</p>",
+    "date": "29/12/2025",
+    "category": "O Esgoto",
+    "categoryClass": "tag-esgoto",
+    "author": "O Rato Rei",
+    "image": "/images/article_esgoto.png"
+  },
+  {
+    "id": 5,
+    "title": "O FUTURO PERDIDO: CYBER-RUÍNAS",
+    "excerpt": "Neon piscando sobre concreto quebrado. Nós vendemos o amanhã para comprar o hoje, e agora o cheque voltou.",
+    "content": "<p><strong>DATA: INDEFINIDA. LOCAL: ZERO.</strong></p><p>Olhe para as telas. O brilho azul que ilumina seu rosto é a radiação da nossa era. Conectados a tudo, não sentimos nada. O futuro que nos prometeram — carros voadores, cura para todas as dores, paz estelar — foi trocado por algoritmos de vício e solidão programada.</p><p>Caminhamos entre fantasmas digitais. Nossas memórias são armazenadas em nuvens que podem dissipar com um clique. O que somos nós senão dados esperando para serem corrompidos?</p><p>A tecnologia avançou, mas a alma recuou. Somos deuses protéticos, coxos e cegos, tateando no escuro com mãos de metal. O futuro não está vindo. O futuro já passou, e nós o perdemos enquanto olhávamos para o espelho negro de nossos dispositivos.</p><p>Não espere o apocalipse. Ele já aconteceu, foi silencioso, e ninguém percebeu porque estava ocupado demais rolando o feed.</p>",
+    "date": "01/01/2026",
+    "category": "O Futuro Perdido",
+    "categoryClass": "tag-future",
+    "author": "O Profeta do Glitch",
+    "image": ""
+  }
+]
