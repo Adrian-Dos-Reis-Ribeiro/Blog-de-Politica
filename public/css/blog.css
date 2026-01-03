@@ -147,28 +147,41 @@ a {
   }
 
   .nav-list {
-    flex-direction: column;
-    gap: 0; /* Remove gap, use padding/border for separation */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns side-by-side */
+    gap: 0.8rem; /* Space between buttons */
     text-align: center;
     width: 100%;
-    background: rgba(255, 255, 255, 0.03);
-    border-radius: 8px;
-    overflow: hidden;
+    background: transparent; /* Remove container background */
+    border-radius: 0;
+    overflow: visible;
   }
 
   .nav-list li {
     width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: none; /* Remove list separators */
+    background: rgba(255, 255, 255, 0.03); /* Individual button background */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .nav-list li:active {
+    transform: scale(0.98);
+    background: rgba(255, 255, 255, 0.08);
   }
 
   .nav-list li:last-child {
-    border-bottom: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Restore consistent border */
   }
 
   .nav-link {
-    display: block;
-    padding: 1rem; /* Larger tap targets */
-    font-size: 1rem;
+    display: flex; /* Center content */
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem; /* Larger tap targets */
+    font-size: 0.9rem;
+    height: 100%;
   }
 
   /* Adjust Spacing/Margins */
@@ -844,13 +857,59 @@ a {
   }
 }
 /* Esconde o cursor personalizado no celular */
+/* --- CORREÇÃO MOBILE APRIMORADA (IHM FRIENDLY) --- */
 @media (max-width: 768px) {
-  .cursor-dot,
-  .cursor-outline {
-    display: none !important;
+  
+  /* 1. Header Compacto e Limpo */
+  .site-header {
+    position: relative !important;
+    top: auto !important;
+    background: #000000 !important;
+    padding-bottom: 15px;
   }
 
-  body {
-    cursor: auto !important; /* Volta o cursor normal do dedo */
+  /* 2. Grid Layout (Lado a Lado) 
+     Princípio: Eficiência de Espaço + Gestalt (Proximidade) */
+  .nav-list {
+    display: grid !important;       
+    grid-template-columns: 1fr 1fr; /* Divide em 2 colunas iguais (50% cada) */
+    gap: 12px;                      /* Espaço de respiro entre botões */
+    padding: 0 15px;                /* Margens laterais para não colar na borda */
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  /* 3. Itens da Lista */
+  .nav-list li {
+    width: 100%; /* Garante preenchimento total da célula */
+    margin: 0;   /* Remove margens residuais */
+  }
+
+  /* 4. Botões Ergonômicos
+     Princípio: Lei de Fitts (Área de toque adequada) */
+  .nav-link {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;      /* Ocupa todo o espaço disponível na grade */
+    min-height: 52px;            /* Altura mínima confortável para o dedo (Fat Finger error prevention) */
+    padding: 5px;
+    font-size: 0.85rem;          /* Tamanho legível */
+    background: #0a0a0a;         /* Contraste suave com o fundo */
+    border: 1px solid #333;
+    border-radius: 8px;          /* Affordance: parece clicável */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5); /* Profundidade sutil */
+  }
+
+  /* Feedback tátil visual ao tocar */
+  .nav-link:active {
+    background: #222;
+    transform: scale(0.98);
+  }
+
+  /* Ajuste para o conteúdo não subir demais */
+  .main-container {
+    padding-top: 10px !important;
   }
 }
